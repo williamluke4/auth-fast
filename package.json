@@ -1,0 +1,43 @@
+{
+  "name": "fast-auth",
+  "version": "0.0.1",
+  "description": "",
+  "main": "/dist/index.js",
+  "types":"/dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "dotenv ts-node tests/index.ts",
+    "release": "auto shipit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamluke4/fast-auth.git"
+  },
+  "keywords": [
+    "fast",
+    "auth",
+    "api",
+    "js",
+    "ts"
+  ],
+  "author": "William Luke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/williamluke4/fast-auth/issues"
+  },
+  "homepage": "https://github.com/williamluke4/fast-auth#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "es6-promise": "^4.2.8",
+    "isomorphic-fetch": "^2.2.1",
+    "node-fetch": "^2.6.0",
+    "urijs": "^1.19.2"
+  },
+  "devDependencies": {
+    "@auto-it/conventional-commits": "^7.16.2",
+    "auto": "^7.16.2",
+    "@types/node-fetch": "^2.5.3",
+    "@types/urijs": "^1.19.4",
+    "dotenv-cli": "^3.0.0"
+  }
+}
