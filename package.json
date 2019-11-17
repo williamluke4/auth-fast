@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/williamluke4/fast-auth.git"
+    "url": "git+https://github.com/williamluke4/auth-fast.git"
   },
   "keywords": [
     "fast",
@@ -23,9 +23,9 @@
   "author": "William Luke",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/williamluke4/fast-auth/issues"
+    "url": "https://github.com/williamluke4/auth-fast/issues"
   },
-  "homepage": "https://github.com/williamluke4/fast-auth#readme",
+  "homepage": "https://github.com/williamluke4/auth-fast#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "es6-promise": "^4.2.8",

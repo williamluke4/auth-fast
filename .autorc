@@ -1,6 +1,6 @@
 {
   "owner": "williamluke4",
-  "repo": "fast-auth",
+  "repo": "auth-fast",
   "plugins": [
     "npm",
     "conventional-commits"
