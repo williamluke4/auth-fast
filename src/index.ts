@@ -1,4 +1,3 @@
-require('dotenv').config()
 require('es6-promise').polyfill();
 require('isomorphic-fetch');
 import URI from 'urijs';

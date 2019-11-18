@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 import { authorize, login, getParams } from '../src'
 const test_identifier = process.env.TEST_IDENTIFIER
 const test_oth = process.env.TEST_OTH
