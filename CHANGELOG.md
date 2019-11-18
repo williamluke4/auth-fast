@@ -1,3 +1,15 @@
+# v0.0.5 (Mon Nov 18 2019)
+
+#### 🐛  Bug Fix
+
+- fix: Only Load dotenv in Tests  (william@ordino.ai)
+
+#### Authors: 1
+
+- William Luke (william@ordino.ai)
+
+---
+
 # v0.0.4 (Mon Nov 18 2019)
 
 #### 🐛  Bug Fix
