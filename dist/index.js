@@ -8,15 +8,15 @@ require('isomorphic-fetch');
 const urijs_1 = __importDefault(require("urijs"));
 const url = new urijs_1.default("https://api.fast.co");
 const APP_SECRET = process.env.APP_SECRET;
-async function authorize({ key, identifier, challengeId, secret, oth }) {
+async function verify({ key, identifier, challengeId, secret, oth }) {
     secret = typeof secret === 'undefined' ? APP_SECRET : secret;
     const verify = url.directory("api/verify").query({ challengeId: challengeId, oth: oth, identifier: identifier, key: key, secret: secret });
     console.log(verify.valueOf());
     const response = await fetch(verify.valueOf());
     const data = await response.json(); // parses JSON response into native JavaScript objects
-    console.log(data);
+    return data;
 }
-exports.authorize = authorize;
+exports.verify = verify;
 async function login({ identifier, key }) {
     // Endpoint: https://api.fast.co/api/invite
     const invite = url.directory("api/invite").query({ identifier: identifier, key: key });

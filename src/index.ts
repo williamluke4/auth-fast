@@ -19,11 +19,11 @@ interface Auth extends LoginAuth {
 interface Data {
   status: number,
   success: Boolean,
-  fast_id: unknown,
+  fast_id: string | null,
   challenge_ip: string,
   challenge_ts: string,
 }
-export async function authorize({
+export async function verify({
   key,
   identifier,
   challengeId,
@@ -36,16 +36,14 @@ export async function authorize({
   console.log(verify.valueOf());
   const response = await fetch(verify.valueOf());
   const data: Data =  await response.json(); // parses JSON response into native JavaScript objects
-  console.log(data);
+  return data
 }
 export async function login({identifier, key}: LoginAuth){
   // Endpoint: https://api.fast.co/api/invite
   const invite = url.directory("api/invite").query({ identifier: identifier, key: key});
-  console.log(invite.query())
-  console.log(invite.valueOf());
   const response = await fetch(invite.valueOf());
   const data: Data =  await response.json(); // parses JSON response into native JavaScript objects
-  console.log(data);
+  return data
 }
 
 interface AuthResult {

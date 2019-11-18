@@ -7,7 +7,14 @@ interface Auth extends LoginAuth {
     secret?: string;
     oth: string;
 }
-export declare function authorize({ key, identifier, challengeId, secret, oth }: Auth): Promise<void>;
+interface Data {
+    status: number;
+    success: Boolean;
+    fast_id: unknown;
+    challenge_ip: string;
+    challenge_ts: string;
+}
+export declare function verify({ key, identifier, challengeId, secret, oth }: Auth): Promise<Data>;
 export declare function login({ identifier, key }: LoginAuth): Promise<void>;
 interface AuthResult {
     identifier: string;

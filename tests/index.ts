@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-import { authorize, login, getParams } from '../src'
+import { verify, login, getParams } from '../src'
 const test_identifier = process.env.TEST_IDENTIFIER
 const test_oth = process.env.TEST_OTH
 const test_challengeid = process.env.TEST_CHALLENGEID
@@ -15,9 +15,9 @@ async function test_login() {
   }
 }
 
-async function test_authorize() {
+async function test_verify() {
   if(app_key && test_identifier && test_challengeid && test_oth){ 
-    await authorize({
+    await verify({
       key: app_key,
       identifier: test_identifier,
       challengeId: test_challengeid,
